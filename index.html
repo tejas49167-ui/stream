@@ -30,61 +30,75 @@
 
         /* TEJFLEX LOGO */
 
-        header {
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-start;
+       header {
+    display: flex;
+    align-items: center;
+    gap: 0;
 
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 900;
-            color: #ff0000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 82px;
+    line-height: 1;
 
-            line-height: 0.8;
-            letter-spacing: -5px;
+    color: #e50914;
+    letter-spacing: -6px;
 
-            margin-bottom: 30px;
-        }
+    margin-bottom: 25px;
+}
 
-        header span {
-            display: inline-block;
-            margin: 0 -2px;
-        }
+header span {
+    display: inline-block;
+    transform-origin: center bottom;
+}
 
-        header span:nth-child(1) {
-            font-size: 108px;
-            transform: translateY(0) rotate(-2deg);
-        }
+/* T */
+header span:nth-child(1) {
+    font-size: 1.12em;
+    transform: translateY(8px) rotate(-3deg);
+}
 
-        header span:nth-child(2) {
-            font-size: 100px;
-            transform: translateY(5px) rotate(-1deg);
-        }
+/* E */
+header span:nth-child(2) {
+    font-size: 1.05em;
+    transform: translateY(4px) rotate(-2deg);
+}
 
-        header span:nth-child(3) {
-            font-size: 88px;
-            transform: translateY(10px) rotate(-1deg);
-        }
+/* J */
+header span:nth-child(3) {
+    font-size: 0.98em;
+    transform: translateY(1px) rotate(-1deg);
+}
 
-        header span:nth-child(4) {
-            font-size: 78px;
-            transform: translateY(14px);
-        }
+/* F */
+header span:nth-child(4) {
+    font-size: 0.95em;
+    transform: translateY(0);
+}
 
-        header span:nth-child(5) {
-            font-size: 88px;
-            transform: translateY(10px) rotate(1deg);
-        }
+/* L */
+header span:nth-child(5) {
+    font-size: 0.98em;
+    transform: translateY(1px) rotate(1deg);
+}
 
-        header span:nth-child(6) {
-            font-size: 100px;
-            transform: translateY(5px) rotate(1deg);
-        }
+/* E */
+header span:nth-child(6) {
+    font-size: 1.05em;
+    transform: translateY(4px) rotate(2deg);
+}
 
-        header span:nth-child(7) {
-            font-size: 108px;
-            transform: translateY(0) rotate(2deg);
-        }
+/* X */
+header span:nth-child(7) {
+    font-size: 1.12em;
+    transform: translateY(8px) rotate(3deg);
+}
 
+@media (max-width: 700px) {
+    header {
+        font-size: 52px;
+        letter-spacing: -4px;
+    }
+}
         /* MOVIE TITLE */
 
         .title {
