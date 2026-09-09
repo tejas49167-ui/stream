@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,20 @@
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
+        /* =========================
+           BODY
+        ========================= */
 
         body {
             background: #050505;
@@ -21,6 +31,10 @@
             min-height: 100vh;
         }
 
+        /* =========================
+           MAIN
+        ========================= */
+
         main {
             width: 73%;
             max-width: 1000px;
@@ -28,78 +42,76 @@
             padding-top: 35px;
         }
 
-        /* TEJFLEX LOGO */
+        /* =========================
+           TEJFLEX LOGO
+        ========================= */
 
-       header {
-    display: flex;
-    align-items: center;
-    gap: 0;
+        header {
+            display: flex;
+            align-items: center;
+            gap: 0;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
-    font-size: 82px;
-    line-height: 1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            font-size: 82px;
+            line-height: 1;
 
-    color: #e50914;
-    letter-spacing: -6px;
+            color: #e50914;
+            letter-spacing: -6px;
 
-    margin-bottom: 25px;
-}
+            margin-bottom: 25px;
+        }
 
-header span {
-    display: inline-block;
-    transform-origin: center bottom;
-}
+        header span {
+            display: inline-block;
+            transform-origin: center bottom;
+        }
 
-/* T */
-header span:nth-child(1) {
-    font-size: 1.12em;
-    transform: translateY(8px) rotate(-3deg);
-}
+        /* T */
+        header span:nth-child(1) {
+            font-size: 1.12em;
+            transform: translateY(8px) rotate(-3deg);
+        }
 
-/* E */
-header span:nth-child(2) {
-    font-size: 1.05em;
-    transform: translateY(4px) rotate(-2deg);
-}
+        /* E */
+        header span:nth-child(2) {
+            font-size: 1.05em;
+            transform: translateY(4px) rotate(-2deg);
+        }
 
-/* J */
-header span:nth-child(3) {
-    font-size: 0.98em;
-    transform: translateY(1px) rotate(-1deg);
-}
+        /* J */
+        header span:nth-child(3) {
+            font-size: 0.98em;
+            transform: translateY(1px) rotate(-1deg);
+        }
 
-/* F */
-header span:nth-child(4) {
-    font-size: 0.95em;
-    transform: translateY(0);
-}
+        /* F */
+        header span:nth-child(4) {
+            font-size: 0.95em;
+            transform: translateY(0);
+        }
 
-/* L */
-header span:nth-child(5) {
-    font-size: 0.98em;
-    transform: translateY(1px) rotate(1deg);
-}
+        /* L */
+        header span:nth-child(5) {
+            font-size: 0.98em;
+            transform: translateY(1px) rotate(1deg);
+        }
 
-/* E */
-header span:nth-child(6) {
-    font-size: 1.05em;
-    transform: translateY(4px) rotate(2deg);
-}
+        /* E */
+        header span:nth-child(6) {
+            font-size: 1.05em;
+            transform: translateY(4px) rotate(2deg);
+        }
 
-/* X */
-header span:nth-child(7) {
-    font-size: 1.12em;
-    transform: translateY(8px) rotate(3deg);
-}
+        /* X */
+        header span:nth-child(7) {
+            font-size: 1.12em;
+            transform: translateY(8px) rotate(3deg);
+        }
 
-@media (max-width: 700px) {
-    header {
-        font-size: 52px;
-        letter-spacing: -4px;
-    }
-}
-        /* MOVIE TITLE */
+        /* =========================
+           MOVIE TITLE
+        ========================= */
 
         .title {
             margin-bottom: 15px;
@@ -108,49 +120,77 @@ header span:nth-child(7) {
             color: #ddd;
         }
 
-        /* VIDEO */
+        /* =========================
+           VIDEO PLAYER
+        ========================= */
 
         .player {
             width: 100%;
             aspect-ratio: 16 / 9;
+
             background: #000;
+
             border: 1px solid #222;
             border-radius: 8px;
+
             overflow: hidden;
+
             box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
         }
 
         .player iframe {
             width: 100%;
             height: 100%;
-            border: 0;
+
             display: block;
+
+            border: 0;
         }
 
-        /* INFO */
+        /* =========================
+           INFO
+        ========================= */
 
         .info {
             margin-top: 15px;
+
             color: #777;
             font-size: 13px;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             padding: 40px;
+
             text-align: center;
+
             color: #444;
             font-size: 12px;
         }
 
-        /* MOBILE */
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
             main {
-                width: 92%;
-                padding-top: 25px;
+                width: 94%;
+                max-width: none;
+
+                padding-top: 20px;
+            }
+
+            /* LOGO */
+
+            header {
+                font-size: 52px;
+                letter-spacing: -3px;
+
+                margin-bottom: 20px;
             }
 
             header span:nth-child(1),
@@ -172,25 +212,89 @@ header span:nth-child(7) {
                 font-size: 46px;
             }
 
-            header {
-                letter-spacing: -3px;
-                margin-bottom: 22px;
-            }
+            /* TITLE */
 
             .title {
                 font-size: 18px;
+                margin-bottom: 12px;
             }
 
+            /* VIDEO */
+
+            .player {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+
+                border-radius: 6px;
+            }
+
+            .player iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            /* INFO */
+
             .info {
+                margin-top: 10px;
                 font-size: 12px;
             }
+
+            /* FOOTER */
+
+            footer {
+                padding: 30px 15px;
+            }
         }
+
+        /* =========================
+           VERY SMALL PHONES
+        ========================= */
+
+        @media (max-width: 380px) {
+
+            main {
+                width: 96%;
+            }
+
+            header {
+                font-size: 45px;
+                letter-spacing: -3px;
+            }
+
+            header span:nth-child(1),
+            header span:nth-child(7) {
+                font-size: 56px;
+            }
+
+            header span:nth-child(2),
+            header span:nth-child(6) {
+                font-size: 51px;
+            }
+
+            header span:nth-child(3),
+            header span:nth-child(5) {
+                font-size: 45px;
+            }
+
+            header span:nth-child(4) {
+                font-size: 40px;
+            }
+
+            .title {
+                font-size: 17px;
+            }
+        }
+
     </style>
 </head>
+
 
 <body>
 
     <main>
+
+        <!-- TEJFLEX LOGO -->
 
         <header>
             <span>T</span>
@@ -202,21 +306,29 @@ header span:nth-child(7) {
             <span>X</span>
         </header>
 
+
+        <!-- MOVIE TITLE -->
+
         <h1 class="title">
             Toxic the Movie
         </h1>
 
+
+        <!-- VIDEO -->
+
         <div class="player">
-            
+
             <iframe
-         src="https://drive.google.com/file/d/11E_lcWREUJZFwxqkBdduUxiEHFwMz5yQ/preview" width="640" height="480"
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; web-share"
+                src="https://drive.google.com/file/d/11E_lcWREUJZFwxqkBdduUxiEHFwMz5yQ/preview"
+                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
                 allowfullscreen
-                frameborder="0"
-                referrerpolicy="strict-origin-when-cross-origin"
                 title="Toxic the Movie">
             </iframe>
+
         </div>
+
+
+        <!-- INFO -->
 
         <div class="info">
             Kindly go to full screen mode
@@ -224,9 +336,13 @@ header span:nth-child(7) {
 
     </main>
 
+
+    <!-- FOOTER -->
+
     <footer>
-        Watch your fav movie , if you want any, msg Tejas - tejas49167@gmail.com
+        Watch your fav movie, if you want any, msg Tejas - tejas49167@gmail.com
     </footer>
 
 </body>
+
 </html>
