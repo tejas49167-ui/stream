@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,266 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
+
     <title>TejFlex</title>
+
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: #050505;
-            color: white;
-            font-family: Arial, Helvetica, sans-serif;
-            min-height: 100vh;
-        }
-
-        main {
-            width: 73%;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding-top: 35px;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 900;
-            font-size: 82px;
-            line-height: 1;
-            color: #e50914;
-            letter-spacing: -6px;
-            margin-bottom: 25px;
-        }
-
-        header span {
-            display: inline-block;
-            transform-origin: center bottom;
-        }
-
-        header span:nth-child(1) {
-            font-size: 1.12em;
-            transform: translateY(8px) rotate(-3deg);
-        }
-
-        header span:nth-child(2) {
-            font-size: 1.05em;
-            transform: translateY(4px) rotate(-2deg);
-        }
-
-        header span:nth-child(3) {
-            font-size: 0.98em;
-            transform: translateY(1px) rotate(-1deg);
-        }
-
-        header span:nth-child(4) {
-            font-size: 0.95em;
-        }
-
-        header span:nth-child(5) {
-            font-size: 0.98em;
-            transform: translateY(1px) rotate(1deg);
-        }
-
-        header span:nth-child(6) {
-            font-size: 1.05em;
-            transform: translateY(4px) rotate(2deg);
-        }
-
-        header span:nth-child(7) {
-            font-size: 1.12em;
-            transform: translateY(8px) rotate(3deg);
-        }
-
-        .title {
-            margin-bottom: 15px;
-            font-size: 20px;
-            font-weight: 500;
-            color: #ddd;
-        }
-
-        .desktop-player {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-            border: 1px solid #222;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
-        }
-
-        .desktop-player iframe {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border: 0;
-        }
-
-        .mobile-player {
-            display: none;
-        }
-
-        .mobile-video {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-            border: 1px solid #222;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
-        }
-
-        .mobile-video iframe {
-            width: 100%;
-            height: 100%;
-            display: block;
-            border: 0;
-        }
-
-        .mobile-box {
-            margin-top: 12px;
-            text-align: center;
-        }
-
-        .drive-button {
-            display: inline-block;
-            width: 100%;
-            background: #e50914;
-            color: white;
-            text-decoration: none;
-            padding: 13px 20px;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.2s;
-        }
-
-        .drive-button:hover {
-            background: #f20d19;
-        }
-
-        .drive-button:active {
-            transform: scale(0.98);
-        }
-
-        .info {
-            margin-top: 15px;
-            color: #777;
-            font-size: 13px;
-        }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            color: #444;
-            font-size: 12px;
-        }
-
-        @media (max-width: 700px) {
-            main {
-                width: 94%;
-                max-width: none;
-                padding-top: 20px;
-            }
-
-            header {
-                font-size: 52px;
-                letter-spacing: -3px;
-                margin-bottom: 20px;
-            }
-
-            header span:nth-child(1),
-            header span:nth-child(7) {
-                font-size: 65px;
-            }
-
-            header span:nth-child(2),
-            header span:nth-child(6) {
-                font-size: 59px;
-            }
-
-            header span:nth-child(3),
-            header span:nth-child(5) {
-                font-size: 52px;
-            }
-
-            header span:nth-child(4) {
-                font-size: 46px;
-            }
-
-            .title {
-                font-size: 18px;
-                margin-bottom: 12px;
-            }
-
-            .desktop-player {
-                display: none;
-            }
-
-            .mobile-player {
-                display: block;
-            }
-
-            .mobile-video {
-                width: 100%;
-                aspect-ratio: 16 / 9;
-                border-radius: 6px;
-            }
-
-            .mobile-video iframe {
-                width: 100%;
-                height: 100%;
-            }
-
-            .info {
-                display: none;
-            }
-
-            footer {
-                padding: 30px 15px;
-                line-height: 1.5;
-            }
-        }
-
-        @media (max-width: 380px) {
-            main {
-                width: 96%;
-            }
-
-            header {
-                font-size: 45px;
-                letter-spacing: -3px;
-            }
-
-            header span:nth-child(1),
-            header span:nth-child(7) {
-                font-size: 56px;
-            }
-
-            header span:nth-child(2),
-            header span:nth-child(6) {
-                font-size: 51px;
-            }
-
-            header span:nth-child(3),
-            header span:nth-child(5) {
-                font-size: 45px;
-            }
-
-            header span:nth-child(4) {
-                font-size: 40px;
-            }
-
-            .title {
-                font-size: 17px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -281,55 +27,82 @@
             <span>X</span>
         </header>
 
-        <h1 class="title">
-            Toxic the Movie
-        </h1>
 
-        <div class="desktop-player">
-            <iframe
-                src="https://drive.google.com/file/d/11E_lcWREUJZFwxqkBdduUxiEHFwMz5yQ/preview"
-                allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
-                allowfullscreen
-                title="Toxic the Movie">
-            </iframe>
-        </div>
+        <!-- MOVIE POSTER -->
 
-        <div class="mobile-player">
+        <a
+            class="movie-poster"
+            href="https://drive.google.com/file/d/11E_lcWREUJZFwxqkBdduUxiEHFwMz5yQ/view"
+            target="_blank"
+            rel="noopener noreferrer">
 
-            <div class="mobile-video">
-                <iframe
-                    src="https://livid.com/embed/btfj61TXjWhB"
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture; web-share"
-                    allowfullscreen
-                    frameborder="0"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    title="Toxic the Movie">
-                </iframe>
+            <img
+                src="toxic_pos.jpg"
+                alt="Toxic the Movie">
+
+            <div class="poster-overlay">
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+                <div class="poster-text">
+                    <h2>Toxic</h2>
+                 
+                </div>
+
             </div>
 
-            <div class="mobile-box">
-                <a
-                    class="drive-button"
-                    href="https://drive.google.com/file/d/11E_lcWREUJZFwxqkBdduUxiEHFwMz5yQ/view"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Watch also on Google Drive
-                </a>
+        </a>
+
+
+
+
+
+         <a
+            class="movie-poster"
+            href="https://drive.google.com/file/d/18ZECo0Uf8-LGtEaQthON9n0ICuD1JP85/view"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            <img
+                src="f1_pos.jpg"
+                alt="F1">
+
+            <div class="poster-overlay">
+
+                <div class="play-button">
+                    ▶
+                </div>
+
+                <div class="poster-text">
+                    <h2>F1</h2>
+                 
+                </div>
+
             </div>
 
-        </div>
+        </a>
+
+
+
+
 
         <div class="info">
-            Go full screen mode if you need
+            Click the poster to watch the movie
         </div>
 
     </main>
 
+
     <footer>
+
         Watch your fav movie, if you want any, msg Tejas -
         tejas49167@gmail.com
+
     </footer>
 
 </body>
 
 </html>
+
